@@ -99,7 +99,8 @@ class OrderScreen extends AppWidget<OrderNotifier, void, void> {
                               GlobalHelper.getColorScheme(context).secondary),
                       borderRadius: BorderRadius.circular(5)),
                   child: Text(
-                    item.paymentMethod!.name,
+                    item.paymentMethod?.toString() ??
+                        '-', // tampilkan "-" jika null
                     style: GlobalHelper.getTextTheme(context,
                             appTextStyle: AppTextStyle.BODY_SMALL)
                         ?.copyWith(

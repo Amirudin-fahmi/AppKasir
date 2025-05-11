@@ -20,7 +20,7 @@ class HomeScreen extends AppWidget<HomeNotifier, void, void> {
         child: RefreshIndicator(
             onRefresh: () => notifier.init(),
             child: ListView(
-              children: [_headerLayout(context), _orderTodayLayout(context)],
+              children: [_headerLayout(context)],
             )));
   }
 

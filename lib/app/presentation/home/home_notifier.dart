@@ -21,7 +21,7 @@ class HomeNotifier extends AppProvider {
   @override
   init() async {
     await _getDetailUser();
-    await _getOrder();
+    // await _getOrder();
   }
 
   _getDetailUser() async {
@@ -31,14 +31,14 @@ class HomeNotifier extends AppProvider {
     hideLoading();
   }
 
-  _getOrder() async {
-    showLoading();
-    final response = await _orderGetTodayUseCase();
-    if (response.success) {
-      _listOrder = response.data!;
-    } else {
-      errorMessage = response.message;
-    }
-    hideLoading();
-  }
+  // _getOrder() async {
+  //   showLoading();
+  //   final response = await _orderGetTodayUseCase();
+  //   if (response.success) {
+  //     _listOrder = response.data!;
+  //   } else {
+  //     errorMessage = response.message;
+  //   }
+  //   hideLoading();
+  // }
 }

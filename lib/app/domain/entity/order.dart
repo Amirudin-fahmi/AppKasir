@@ -19,7 +19,7 @@ sealed class Order with _$Order {
       @JsonKey(name: 'payment_method_id') int? paymentMethodId,
       @JsonKey(name: 'paid_amount') int? paidAmount,
       @JsonKey(name: 'change_amount') int? changeAmount,
-      @JsonKey(name: 'payment_method') PaymentMethodEntity? paymentMethod,
+      @JsonKey(name: 'payment_method')  PaymentMethodEntity? paymentMethod,
       @JsonKey(name: 'updated_at') String? updatedAt,
       @JsonKey(name: 'order_products')
       required List<ProductItemOrderEntity> items}) = OrderEntity;

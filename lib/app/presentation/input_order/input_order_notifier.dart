@@ -52,7 +52,7 @@ class InputOrderNotifier extends AppProvider {
             .first
             .value
         : '';
-    return OrderEntity(
+    return  OrderEntity(
         name: _nameController.text,
         gender: genderValue,
         email: _emailController.text,
